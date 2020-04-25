@@ -1,0 +1,130 @@
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 15px;
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(84, 145, 236, 0.849);
+  /* background-color: #4984B8; */
+  color: rgba(250, 213, 145, 0.863);
+  list-style-type: none;
+  max-width: 600px;
+  margin: auto;
+  /* //#8AB8FE */
+}
+
+#page {
+  margin: auto;
+  width: 600px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgba(250, 213, 145, 0.863);
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 1.25rem 0;
+  font-weight: 500px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 1.25rem 0;
+  font-family: Helvetica;
+}
+
+p {
+  text-align: center;
+  font-family: "Times New Roman";
+  margin: 0 0 1.5rem 0;
+  /* padding: 20px; */
+}
+
+a {
+  color: rgba(250, 213, 145, 0.863);
+  text-decoration:none;
+}
+a:hover {
+  text-decoration: none;
+  border-radius: 6px;
+  background-color: rgba(250, 213, 145, 0.863);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+a:visited {
+  color:#000;
+}
+.nav {
+  padding:5px;
+  border:solid 2px #c0c0c0;
+  border-radius:5px;
+  float:left;
+  align-items: center;
+}
+.nav li {
+  list-style-type:none;
+  float:left;
+  margin:0 10px 0 10px;
+  padding: 15px;
+}
+.nav li a {
+  text-align:center;
+  width:105px;
+  float:left;
+}
+
+.nav li.active a {
+  color:#fff;
+  font-weight:bold;
+}
+/* .info-p::before {
+  /* content: '\a'; */
+  /* white-space: pre; */
+
+.info-p {
+  width: 100%;
+  text-align: center;
+  float: center;
+}
+
+#message-list ul li {
+  float:left;
+  margin:0 10px 0 10px;
+  /* padding: 15px; */
+}
+
+/* .story-form {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+} */
+
+.story-form button[type="submit"] {
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+#story-form .shareYourStory {
+  height: 100px;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+button {
+  border-radius: 6px;
+  padding: 8px 15px;
+  border: 2px solid rgba(250, 213, 145, 0.863);
+}
+button:hover {
+  background-color: rgba(250, 213, 145, 0.863);;
+  border-radius: 6px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+textarea {
+  border-radius: 6px;
+  border: 1px solid rgba(250, 213, 145, 0.863);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    {{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --}}
+    <link rel="stylesheet" href="css/style.css">
+    {{!-- <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/resources.css"> --}}
+
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <div id="page" class="container">
+      {{{ body }}}
+    </div>
+  </body>
+  <script>
+$(function () {
+    setNavigation();
+});
+
+function setNavigation() {
+    var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
+
+    $(".nav a").each(function () {
+        var href = $(this).attr('href');
+        if (path.substring(0, href.length) === href) {
+            $(this).closest('li').addClass('active');
+        }
+    });
+}
+<script>
+</html>
