@@ -26,6 +26,7 @@
     "express-promise-router": "^3.0.3",
     "fn": "^0.2.0",
     "handlebars": "^4.7.6",
+    "hbs": "^4.1.1",
     "http-errors": "^1.7.3",
     "knex": "^0.21.0",
     "morgan": "^1.10.0",

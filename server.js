@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-let app = require('../app');
+let app = require('./app');
 let debug = require('debug')('social-wall:server');
 let http = require('http');
 

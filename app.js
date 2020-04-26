@@ -5,8 +5,10 @@ let createError = require('http-errors');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let express = require('express');
+let Handlebars = require('hbs')
 
 let app = express();
+let router = express.Router();
 
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = app.get('env');
