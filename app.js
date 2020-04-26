@@ -5,7 +5,8 @@ let createError = require('http-errors');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let express = require('express');
-let Handlebars = require('hbs')
+let Handlebars = require('hbs');
+let moment = require('moment');
 
 let app = express();
 let router = express.Router();
@@ -37,6 +38,14 @@ if (app.inDevelopment()) {
 } else {
   app.use(logger('combined'));
 }
+
+
+// Handlebars.registerHelper('formatTimestamp', function (timestamp) {
+//   return 'helper value';
+// });
+Handlebars.registerHelper('formatTimestamp', function(timestamp) {
+  return moment(timestamp).format('MMMM Do YYYY');
+});
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

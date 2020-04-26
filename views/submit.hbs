@@ -1,8 +1,8 @@
 <h1 class='title'> In this page you can see what other people are grateful for.</h1>
 
 <div class="nav">
-  <a  href="mainPage.html">Submit yours</a>
-  <a href="watchPage.html">Read More</a>
+  <a  href="/">Submit yours</a>
+  <a href="/submit">Read More</a>
 </div>
 <br>
 
@@ -28,7 +28,29 @@
         </form>
   </div>
 
-  <div class='gratefulnessPost'>
+  <div id="messages">
+    <h2>Gratitude</h2>
+
+    {{#unless gratitudeMessages}}
+      <p>Sorry, no messages. :(</p>
+    {{else}}
+      <ol class="message-list">
+        {{#each gratitudeMessages}}
+          <li>
+            <div class="message-body">
+              {{body}}
+            </div>
+            <div class="message-timestamp">
+              Posted on {{formatTimestamp createdAt}} by {{first_name}}
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+    {{/unless}}
+  </div>
+</div>
+
+  {{!-- <div class='gratefulnessPost'>
     <p> "<strong>One </strong> thing about my family I am grateful for is my brother, because he spends time to teach me playing the piano. "</p>
 
     <p class='signOff'>Said George from Utrecht, Netherlands.</p>
@@ -50,4 +72,4 @@
     <p> "<strong>One </strong> thing about my job/school I am grateful for is my advisor, because she always reaches out before deadlines to make sure I am on track. "</p>
 
     <p class='signOff'>Said Alexia from Miami,Florida.</p>
-  </div>
+  </div> --}}
