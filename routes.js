@@ -15,6 +15,10 @@ router.get('/', function(req, res) {
   res.render('main')
 });
 
+router.get('/prompts', function(req,res) {
+  res.render('prompts')
+})
+
 router.get('/submit', async function(req, res) {
   let gratitudeMessages = await knex('gratitude_messages').select('*').orderBy('created_at', 'DESC');
 

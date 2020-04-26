@@ -9,6 +9,7 @@ body {
   font-size: 36px;
   border-style: dotted;
   border-width: 7px;
+  margin-top: 15px;
 }
 
 .question {
@@ -16,7 +17,8 @@ body {
   font-size: 22px;
   color: rgb(227, 227, 238);
   margin: 8px;
-  font-family: cursive;;
+  font-family: cursive;
+  margin-top: 10px;
 }
 
 .prompt {
@@ -24,7 +26,8 @@ body {
   font-size: 20px;
   margin: 3px;
   text-align: center;
-  font-family: cursive;;
+  font-family: cursive;
+  margin-top: 15px;
 }
 
 .gratefulnessForm {
@@ -36,6 +39,16 @@ body {
   width: 50%;
   margin-left: 25%;
 }
+
+.promptsGratefulnessForm {
+  background-color: rgb(87, 73, 184);
+  text-align: center;
+  border-radius: 10px;
+  width: 70%;
+  margin-left: 25%;
+  margin-bottom: 10px;
+}
+
 .gratefulnessPost {
   background-color: rgb(87, 73, 184);
   color: lavender;
@@ -60,7 +73,7 @@ body {
   padding-top: 15px;
   padding-left: 5px;
   padding-right: 5px;
-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .signOff {
@@ -74,6 +87,7 @@ margin-bottom: 15px;
 .button {
   background-color: rgb(132, 200, 223); /* Green */
   border: none;
+  border-radius: 5px;
   color: lavender;
   padding: 15px 32px;
   text-align: center;
@@ -81,6 +95,30 @@ margin-bottom: 15px;
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+.question p {
+  margin-top: 30px;
+}
+
+.btn.btn-primary.btn-lg {
+  background-color: rgb(132, 200, 223);
+  border: none;
+
+}
+
+::placeholder {
+  color: rgba(153, 151, 155, 0.938)
+}
+
+.col {
+  flex: 33.3%;
+  padding: 5px;
 }
 
 input {

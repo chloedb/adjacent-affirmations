@@ -8,30 +8,44 @@
     <link rel="stylesheet" href="css/style.css">
     {{!-- <link rel="stylesheet" href="css/share.css">
     <link rel="stylesheet" href="css/resources.css"> --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <title>{{title}}</title>
   </head>
   <body>
     <div id="page" class="container">
+      <h1 class='title'>Things get better</be></h1>
+
+      <div class='prompt'>
+        <p>We help you reach inner peace by structuring gratefulness (one of the steps towards peace) into smaller categories.
+          We understand that daily life is overwhelming. When asked the question, "What are you grateful for?",
+          you might have 1000 or 0 things on your mind. We need you to know that both and anything in between
+          is completely normal. Things get better. There are way too many good things in this world,
+          being grateful for the ones you care about the most, will give you the closure you need.
+        </p>
+      </div>
       {{{ body }}}
     </div>
   </body>
   <script>
-$(function () {
-    setNavigation();
-});
-
-function setNavigation() {
-    var path = window.location.pathname;
-    path = path.replace(/\/$/, "");
-    path = decodeURIComponent(path);
-
-    $(".nav a").each(function () {
-        var href = $(this).attr('href');
-        if (path.substring(0, href.length) === href) {
-            $(this).closest('li').addClass('active');
-        }
+    $(function () {
+      setNavigation();
     });
-}
-<script>
+
+    function setNavigation() {
+      var path = window.location.pathname;
+      path = path.replace(/\/$/, "");
+      path = decodeURIComponent(path);
+
+      $(".nav a").each(function () {
+          var href = $(this).attr('href');
+          if (path.substring(0, href.length) === href) {
+              $(this).closest('li').addClass('active');
+          }
+      });
+    }
+  <script>
 </html>
