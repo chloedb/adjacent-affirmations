@@ -21,13 +21,22 @@ router.get('/submit', async function(req, res) {
   res.render('submit', { gratitudeMessages });
 });
 
-// router.post('/formSubmission', function(req, res) {
-//   let storyBody = request.body.body;
-//   await knex('stories').insert({
-//     body: storyBody,
-//   });
+router.get('/formSubmission', async function(req, res) {
+  let gratitudeBodies = req.body.answer;
+  // res.send(gratitudeBodies)
+  // console.log(gratitudeBodies)
+  let name = req.body.name;
+  let location = req.body.location;
 
-//   response.redirect('/submit');
-// });
+  // await knex('gratitude_messages').insert({
+  //   body: gratitudeBodies,
+  //   first_name: name,
+  //   location: location
+  // });
+
+  response.redirect('/submit');
+});
+
+
 
 module.exports = router;
