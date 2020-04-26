@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost:5432/DATABASE NAME',
+    connection: 'postgres://localhost:5432/gratitudes_development',
     debug: true,
     migrations: {
       tableName: 'knex_migrations',
@@ -10,7 +10,7 @@ module.exports = {
 
   test: {
     client: 'pg',
-    connection: 'postgres://localhost:5432/DATABASE NAME',
+    connection: 'postgres://localhost:5432/gratitudes_test',
     migrations: {
       tableName: 'knex_migrations',
     }

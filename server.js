@@ -1,75 +1,90 @@
-'use strict';
+#!/usr/bin/env node
 
-let path = require('path');
-let createError = require('http-errors');
-let cookieParser = require('cookie-parser');
-let logger = require('morgan');
-let express = require('express');
+/**
+ * Module dependencies.
+ */
 
-let app = express();
+let app = require('../app');
+let debug = require('debug')('social-wall:server');
+let http = require('http');
 
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = app.get('env');
+/**
+ * Get port from environment and store in Express.
+ */
+
+let port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+let server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  let port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
 }
 
-// A helper to generate directory paths relative to the
-// project root directory,
-app.root = (...args) => path.join(__dirname, ...args);
+/**
+ * Event listener for HTTP server "error" event.
+ */
 
-// Helper functions to check whether we're in the production
-// or development environment.
-app.inProduction = () => app.get('env') === 'production';
-app.inDevelopment = () => app.get('env') === 'development';
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
 
-// Tell Express to look in views/ to find our view templates
-// and to use the Handlebars (hbs) to render them.
-app.set('views', app.root('views'));
-app.set('view engine', 'hbs');
+  let bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
 
-// Put static files like stylesheets in public/
-app.use(express.static(app.root('public')));
-
-// Use a different log format for development vs. production
-if (app.inDevelopment()) {
-  app.use(logger('dev'));
-} else {
-  app.use(logger('combined'));
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
 }
 
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+/**
+ * Event listener for HTTP server "listening" event.
+ */
 
-// Knex is a module used to generate SQL queries
-// See http://knexjs.org/
-let Knex = require('knex');
-
-// Tell Knex how to connect to our database
-// See config/database.js
-let dbConfig = require(app.root('knexfile'));
-Knex(dbConfig[process.env.NODE_ENV]);
-
-
-// See routes.js — this is where our main app code lives.
-let routes = require('./routes');
-app.use('/', routes);
-
-// If no route handled the request then generate an
-// HTTP 404 Not Found error
-app.use((req, res, next) => {
-  next(createError(404));
-});
-
-// A catch-all error handler.
-app.use((err, req, res, next) => {
-  res.locals.message = err.message;
-  res.locals.error = req.app.inDevelopment() ? err : {};
-
-  res.status(err.statusCode || 500);
-  res.render('server-error');
-});
-
-app.listen(process.env.PORT || 3000, () => {
-  console.log('Listening on port 3000');
-});
-
-module.exports = app;
+function onListening() {
+  let addr = server.address();
+  let bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}
