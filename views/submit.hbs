@@ -1,14 +1,11 @@
-<h1 class='title'> In this page you can see what other people are grateful for.</h1>
-
-<div class="nav">
-  <a  href="/">Submit yours</a>
-  <a href="/submit">Read More</a>
+<div class="resultsTitle">
+  <h1> See what other people are grateful for below:</h1>
 </div>
-<br>
 
   <div class='locationForm'>
     <form>
     <label>What location would you like to see answers from?<br></label>
+    <br>
     <input type="radio" id="Greece" name="satisfaction" value="Greece">
     <label for="Greece">Greece</label>
 
@@ -20,32 +17,33 @@
 
     <input type="radio" id="Utrehct, Netherlands" name="satisfaction" value="Utrehct, Netherlands">
     <label for="Utrehct, Netherlands">Utrehct, Netherlands</label>
-    <div>
-      <br>
+    <br>
 
+    <div class="locationSubmit">
       <button type='submit' id='submitButton' class='button'>Save and submit your answers</button>
-        </div> <br>
-        </form>
+    </div>
+     <br>
+    </form>
   </div>
 
   <div id="messages">
-    <h2>Gratitude</h2>
 
     {{#unless gratitudeMessages}}
       <p>Sorry, no messages. :(</p>
     {{else}}
-      <ol class="message-list">
-        {{#each gratitudeMessages}}
-          <li>
-            <div class="message-body">
-              {{body}}
-            </div>
-            <div class="message-timestamp">
-              Posted on {{formatTimestamp createdAt}} by {{first_name}}
-            </div>
-          </li>
-        {{/each}}
-      </ol>
+
+          {{#each gratitudeMessages}}
+            <div class='gratefulnessPost'>
+              <div class="message-body">
+                {{body}}
+              </div>
+              <div class="message-timestamp">
+                <div class="signOff">
+                  Posted by {{first_name}} from {{location}} on {{formatTimestamp createdAt}}
+                </div>
+              </div>
+             </div>
+          {{/each}}
     {{/unless}}
   </div>
 </div>
