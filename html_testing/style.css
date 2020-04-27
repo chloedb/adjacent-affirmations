@@ -114,3 +114,30 @@ input{
     background-color: lightblue;
 
 }
+
+.steps{
+  background-color: rgb(87, 73, 184);
+  color: lavender;
+  text-align: center;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: 25%;
+  font-size: 20px;
+  padding-top: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.panic_exercise_prompt{
+  font-style: italic;
+  color: rgb(223, 223, 20);
+}
+.panic_exercise{
+  font-style: italic;
+}
+
+li{
+ color: rgb(223, 223, 20);
+
+}
