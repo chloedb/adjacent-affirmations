@@ -98,6 +98,11 @@ body {
 .navbar-dark.bg-custom {
   background-color: rgb(132, 200, 223);
 }
+.nav-link:hover {
+  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
+  background-color: rgb(87, 73, 184);
+  border-radius: 4px;
+}
 
 .signOff {
   font-size: 16px;
@@ -174,8 +179,9 @@ input {
   border-style: solid;
   border-width: 1px;
   background-color: lightblue;
-
 }
+
+
 
 div {
   margin: 10px;
