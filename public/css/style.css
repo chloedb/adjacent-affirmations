@@ -4,12 +4,16 @@ body {
 }
 
 .title {
-  color: rgb(113, 93, 243);
+  color:  rgb(132, 200, 223);
   text-align: center;
-  font-size: 36px;
+  font-size: 48px;
   border-style: dotted;
+  border-color: rgb(113, 93, 243);
   border-width: 7px;
+  border-radius: 10px;
   margin-top: 15px;
+
+  text-shadow: -1px 1px 0 rgb(113, 93, 243), 1px 1px 0 rgb(113, 93, 243), 1px -1px 0 rgb(113, 93, 243)
 }
 
 .resultsTitle {
@@ -175,4 +179,9 @@ input {
 
 div {
   margin: 10px;
+}
+
+.form-group textarea {
+  width: 400px;
+  height: 100px;
 }
