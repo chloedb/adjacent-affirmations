@@ -37,7 +37,6 @@
   async function getUsers(){
     const response = await fetch('/authentication');
     const data = await response.json();
-
     for (item of data) {
       const root = document.createElement('div');
       const username = document.createElement('div');
