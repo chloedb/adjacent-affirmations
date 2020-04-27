@@ -1,20 +1,20 @@
 <h1 class='title'> In this page you can see what other people are grateful for.</h1>
 
 <div class="nav">
-<<<<<<< HEAD
+
   <a  href="/">Submit yours</a>
   <a href="/submit">Read more</a>
 </div>
-=======
-  <a  href="mainPage.html">Submit yours</a>
-  <a href="watchPage.html">Read More</a>
+
+
+<div class="resultsTitle">
+  <h1> See what other people are grateful for below:</h1>
 </div>
-<br>
->>>>>>> 6eeb220eb187c50da705991328437fed721a1e74
 
   <div class='locationForm'>
     <form>
     <label>What location would you like to see answers from?<br></label>
+    <br>
     <input type="radio" id="Greece" name="satisfaction" value="Greece">
     <label for="Greece">Greece</label>
 
@@ -26,15 +26,38 @@
 
     <input type="radio" id="Utrehct, Netherlands" name="satisfaction" value="Utrehct, Netherlands">
     <label for="Utrehct, Netherlands">Utrehct, Netherlands</label>
-    <div>
-      <br>
+    <br>
 
+    <div class="locationSubmit">
       <button type='submit' id='submitButton' class='button'>Save and submit your answers</button>
-        </div> <br>
-        </form>
+    </div>
+     <br>
+    </form>
   </div>
 
-  <div class='gratefulnessPost'>
+  <div id="messages">
+
+    {{#unless gratitudeMessages}}
+      <p>Sorry, no messages. :(</p>
+    {{else}}
+
+          {{#each gratitudeMessages}}
+            <div class='gratefulnessPost'>
+              <div class="message-body">
+                {{body}}
+              </div>
+              <div class="message-timestamp">
+                <div class="signOff">
+                  Posted by {{first_name}} from {{location}} on {{formatTimestamp createdAt}}
+                </div>
+              </div>
+             </div>
+          {{/each}}
+    {{/unless}}
+  </div>
+</div>
+
+  {{!-- <div class='gratefulnessPost'>
     <p> "<strong>One </strong> thing about my family I am grateful for is my brother, because he spends time to teach me playing the piano. "</p>
 
     <p class='signOff'>Said George from Utrecht, Netherlands.</p>
@@ -56,4 +79,4 @@
     <p> "<strong>One </strong> thing about my job/school I am grateful for is my advisor, because she always reaches out before deadlines to make sure I am on track. "</p>
 
     <p class='signOff'>Said Alexia from Miami,Florida.</p>
-  </div>
+  </div> --}}
