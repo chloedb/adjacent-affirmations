@@ -2,21 +2,41 @@
   <h1> See what other people are grateful for below:</h1>
 </div>
 
-<form id="filter" action="/filter" method="GET">
   <div class="container">
     <div class="row">
-      <div class="col-sm-1">
-        <input id="myInput" type="text" name="term" placeholder="Filter by location" autocomplete="off"
-          {{#if locationFilter}}
-            value="{{locationFilter}}"
-          {{/if}}>
+      <div class="buttonContainer">
+        <div class="col">
+          <form id="filter" action="/filter" method="GET">
+            <input id="myInput" type="text" name="term" placeholder="Filter by location" autocomplete="off"
+              {{#if locationFilter}}
+                value="{{locationFilter}}"
+              {{/if}}>
+            <div class="locationSubmit">
+              <button type='submit' id='submitButton' class='button'>Submit</button>
+            </div>
+          </form>
 
-        <div class="locationSubmit">
-          <button type='submit' id='submitButton' class='button'>Submit</button>
+          <form id="keywordFilter" action="/keyword" method="GET">
+            <input id="myInput" type="text" name="term" placeholder="Filter by keyword" autocomplete="off"
+            {{#if keywordFilter}}
+              value="{{keywordFilter}}"
+            {{/if}}>
+
+            <div class="keywordSubmit">
+              <button type='submit' id='submitButton' class='button'>Submit</button>
+            </div>
+          </form>
+
+          <form id="filter" action="/readall" method="GET">
+            <div class="readAllButton">
+              <button type='submit' id='submitButton' class='button'>See All Posts</button>
+            </div>
+          </form>
         </div>
       </div>
 
-      <div class="col-sm-10">
+
+      <div class="col">
         <div id="messages">
           {{#unless gratitudeMessages}}
             <p>Sorry, no messages. :(</p>
@@ -40,4 +60,3 @@
     </div>
   </div>
   <br>
-</form>

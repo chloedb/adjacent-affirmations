@@ -42,6 +42,24 @@ router.get('/filter', async(request, response) => {
   response.render('submit', { gratitudeMessages, locationFilter });
 });
 
+router.get('/keyword', async(request, response) => {
+  // want to retrieve search term from page
+  let keywordFilter = request.query.term;
+  console.log('Searching gratitude messages with keyword: ', keywordFilter);
+
+  // make query for similar results from SQL database
+  let gratitudeMessages = await GratitudeMessage.query().where('body', 'ilike', `%${keywordFilter}%`);
+
+  // Render the page with the results
+  response.render('submit', { gratitudeMessages, keywordFilter });
+});
+
+router.get('/readall', async(request, response) => {
+  let gratitudeMessages = await knex('gratitude_messages').select('*').orderBy('created_at', 'DESC');
+
+  response.render('submit', { gratitudeMessages });
+});
+
 router.post('/formSubmission', async function(req, res) {
   let body = req.body.body;
   let first_name = req.body.first_name;

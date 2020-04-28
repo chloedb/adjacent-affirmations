@@ -12,7 +12,6 @@ body {
   border-width: 7px;
   border-radius: 10px;
   margin-top: 15px;
-
   text-shadow: -1px 1px 0 rgb(113, 93, 243), 1px 1px 0 rgb(113, 93, 243), 1px -1px 0 rgb(113, 93, 243)
 }
 
@@ -62,12 +61,14 @@ body {
 }
 
 .gratefulnessPost {
-  background-color: rgb(132, 200, 223);
-  color: rgb(87, 73, 184);
-  text-align: center;
+  background-color: rgb(87, 73, 184);
+  border-style: solid;
+  border-color: rgb(132, 200, 223);
+  color: lavender;
+  text-align: left;
   border-radius: 10px;
-  width: 50%;
-  margin-left: 25%;
+  width: 70%;
+  margin-left: 15px;
   font-size: 20px;
   padding-top: 1px;
   padding-left: 5px;
@@ -92,6 +93,43 @@ body {
 
 .locationSubmit button[type="submit"] {
   color: rgb(87, 73, 184);
+  width: 70px;
+  height: 35px;
+  text-align: center;
+  padding: 3px 3px;
+  font-size: 12px;
+}
+
+.keywordSubmit button[type="submit"] {
+  color: rgb(87, 73, 184);
+  width: 70px;
+  height: 35px;
+  text-align: center;
+  padding: 3px 3px;
+  font-size: 12px;
+}
+
+form[id="keywordFilter"] {
+  margin-top: 10px;
+}
+
+form[id="locationFilter"] {
+  margin-top: 40px;
+}
+
+.buttonContainer {
+  background-color: rgb(87, 73, 184);
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(132, 200, 223);
+  height: 320px;
+}
+
+.readAllButton button {
+  color: rgb(87, 73, 184);
+  background-color:  rgb(132, 200, 223);
+  width: 200px;
+  margin-top: 30px;
 }
 
 .navbar-dark.bg-custom {
