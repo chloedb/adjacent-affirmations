@@ -60,6 +60,11 @@ router.get('/readall', async(request, response) => {
   response.render('submit', { gratitudeMessages });
 });
 
+router.get('/about', async(req, res) => {
+  res.render('about')
+
+});
+
 router.post('/formSubmission', async function(req, res) {
   let body = req.body.body;
   let first_name = req.body.first_name;
