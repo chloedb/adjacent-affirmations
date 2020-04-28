@@ -39,8 +39,22 @@ body {
   text-align: center;
   font-family: cursive;
   margin-top: 15px;
+  color: rgb(49, 41, 105);
+  padding: 20px;
+  border-radius: 10px;
 }
 
+.prompt.prompt1 {
+  background-color: rgb(132, 200, 223);
+}
+
+.prompt.prompt2 {
+  background-color: rgb(99, 192, 223);
+}
+
+.prompt.prompt3 {
+  background-color: rgb(48, 176, 219)
+}
 .gratefulnessForm {
   background-color: rgb(87, 73, 184);
   /* background-image: linear-gradient(to right, rgb(133, 212, 238),rgb(115, 102, 196)); */
@@ -55,7 +69,7 @@ body {
   background-color: rgb(87, 73, 184);
   text-align: center;
   border-radius: 10px;
-  width: 70%;
+  width: 50%;
   margin-left: 25%;
   margin-bottom: 10px;
 }
@@ -201,8 +215,6 @@ input {
   width: 16.5%;
   border-radius: 5px;
   margin-left: 41%;
-
-
 }
 
 .nav a {
@@ -218,8 +230,6 @@ input {
   background-color: lightblue;
 }
 
-
-
 div {
   margin: 10px;
 }
@@ -227,4 +237,65 @@ div {
 .form-group textarea {
   width: 400px;
   height: 100px;
+}
+
+.paragraph1 .steps{
+  background-color: rgb(87, 73, 184);
+}
+
+.paragraph2 .steps {
+  background-color: rgb(97, 86, 170);
+}
+
+.paragraph3 .steps {
+  background-color: rgb(126, 117, 185);
+}
+
+.paragraph4 .steps {
+  background-color: rgb(169, 162, 216);
+}
+
+.steps{
+  color: lavender;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-top: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  list-style: none;
+}
+.experience ul li{
+  list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 1.25rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 1.25rem 0;
+  font-family: Helvetica;
+}
+
+p {
+  font-family: "Times New Roman";
+  margin: 0 0 1.5rem 0;
 }

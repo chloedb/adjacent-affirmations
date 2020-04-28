@@ -62,8 +62,8 @@ router.get('/readall', async(request, response) => {
 
 router.get('/about', async(req, res) => {
   res.render('about')
-
 });
+
 
 router.post('/formSubmission', async function(req, res) {
   let body = req.body.body;
