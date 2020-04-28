@@ -4,6 +4,7 @@
 
 let Router = require('express-promise-router');
 let router = new Router();
+let GratitudeMessage = require('./models/GratitudeMessage');
 
 // Knex is a module used to generate SQL queries
 // See http://knexjs.org/
@@ -29,6 +30,18 @@ router.get('/submit', async function(req, res) {
   res.render('submit', { gratitudeMessages });
 });
 
+router.get('/filter', async(request, response) => {
+  // want to retrieve search term from page
+  let locationFilter = request.query.term;
+  console.log('Searching gratitude messages with location: ', locationFilter);
+
+  // make query for similar results from SQL database
+  let gratitudeMessages = await GratitudeMessage.query().where('location', 'ilike', `%${locationFilter}%`);
+
+  // Render the page with the results
+  response.render('submit', { gratitudeMessages, locationFilter });
+});
+
 router.post('/formSubmission', async function(req, res) {
   let body = req.body.body;
   let first_name = req.body.first_name;
@@ -42,6 +55,7 @@ router.post('/formSubmission', async function(req, res) {
 
   res.redirect('/submit');
 });
+
 router.post('/formpromptsubmission', async function(req, res) {
   let body1 = req.body.body1;
   console.log('this is body1', body1)
