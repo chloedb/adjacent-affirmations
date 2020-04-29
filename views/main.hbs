@@ -1,7 +1,8 @@
-<h1 class='gratitude-title'>Give Gratitude</h1>
-
-<div class="instructions text-center">
-  <p>What are you grateful for? Reflect on this question below. Your submission will be visible to all visitors of this site.</p>
+<div class='header'>
+  <h1 class='gratitude-title'>Give Gratitude</h1>
+  <div class="instructions text-center">
+    <p>What are you grateful for? Reflect on this question below. Your submission will be visible to all visitors of this site. Examples are below.</p>
+  </div>
 </div>
 
 <form action='/formSubmission' method='POST' class="d-flex justify-content-center">
@@ -10,13 +11,14 @@
     <div class="form-group">
       <div class='question'>
           <label for="answer"> What are you grateful for?</label>
-          <textarea class="input" type="text" placeholder="I am grateful for ... " name="body" id='answer'></textarea>
+          <textarea class="input" placeholder="I am grateful for ... " name="body" id='answer'></textarea>
       </div>
-    <div>
+    </div>
 
     <div class="form-group">
       <div class='question'>
         <label for="answer"> Your first name:</label>
+        <br>
         <input class="input" type="text" placeholder="Bob" name="first_name" id='answer'>
       </div>
     </div>
@@ -29,12 +31,25 @@
     </div>
 
     <div class='question'>
-      <button type='submit' id='submitButton' class='btn btn-primary btn-lg'>Submit</button>
+      <button type='submit' id='submitButton' class='btn btn-primary btn-lg'>Send gratitude!</button>
+    </div>
+  {{!-- </div> --}}
+    </form>
+    <div class="question">
+      <a style="width: fit-content; margin: 2% auto;" href="/prompts" class="btn btn-primary btn-lg stuck">Stuck? Click here for some gratitude prompts!</a>
     </div>
   </div>
-</form>
-<div class="question">
-  <a style="width: fit-content; margin: 2% auto;" href="/prompts" class="btn btn-primary btn-lg stuck">Stuck? Click here for some gratitude prompts!</a>
+
+<div class='gratefulnessPost'>
+  <p> "<strong>One </strong> thing about my family I am grateful for is my brother, because he spends time to teach me playing the piano. "</p>
+
+  <p class='signOff'>Said George from Utrecht, Netherlands.</p>
+</div>
+
+<div class='gratefulnessPost'>
+  <p> "<strong>One </strong> thing about earth y I am grateful for is the sun, because it makes me feel alive. "</p>
+
+  <p class='signOff'>Said Nicole from Davidson, North Carolina.</p>
 </div>
 
 <script>

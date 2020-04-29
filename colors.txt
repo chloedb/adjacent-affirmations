@@ -1,0 +1,3 @@
+the colors from previous theme:
+
+rgb(87, 73, 184) -- dark purple
