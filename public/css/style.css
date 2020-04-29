@@ -188,7 +188,7 @@ form[id="locationFilter"] {
 }
 .nav-link:hover {
   /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
-  background-color: rgb(87, 73, 184);
+  background-color: rgb(165, 148, 163);
   border-radius: 4px;
 }
 
@@ -204,7 +204,7 @@ form[id="locationFilter"] {
   background-color: rgb(132, 223, 219); /* Green */
   border: none;
   border-radius: 5px;
-  color: rgb(87, 73, 184);
+  color: rgb(165, 148, 163);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;

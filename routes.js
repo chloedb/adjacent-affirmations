@@ -64,7 +64,6 @@ router.get('/about', async(req, res) => {
   res.render('about')
 });
 
-
 router.post('/formSubmission', async function(req, res) {
   let body = req.body.body;
   let first_name = req.body.first_name;
@@ -81,13 +80,9 @@ router.post('/formSubmission', async function(req, res) {
 
 router.post('/formpromptsubmission', async function(req, res) {
   let body1 = req.body.body1;
-  console.log('this is body1', body1)
   let body2 = req.body.body2;
-  console.log('this is body2', body2)
   let body3 = req.body.body3;
-  console.log('this is body3', body3)
   let body4 = req.body.body4;
-  console.log('this is body4', body4)
   let first_name = req.body.first_name;
   let location = req.body.location;
 
