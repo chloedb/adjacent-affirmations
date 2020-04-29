@@ -1,26 +1,51 @@
 body {
-  background-color: linear-gradient(to right , rgb(115, 102, 196),rgb(238, 238, 11) );
-  background-image: linear-gradient(to right,rgb(113, 93, 243), rgb(132, 200, 223));
+  background-image: url('/images/sunset.jpg');
+  background-repeat: repeat;
+  background-size: 1536px 1025px;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-.title {
-  color:  rgb(132, 200, 223);
+.panic-title {
+  color:  white;
   text-align: center;
-  font-size: 48px;
-  border-style: dotted;
-  border-color: rgb(113, 93, 243);
-  border-width: 7px;
-  border-radius: 10px;
-  margin-top: 15px;
-  text-shadow: -1px 1px 0 rgb(113, 93, 243), 1px 1px 0 rgb(113, 93, 243), 1px -1px 0 rgb(113, 93, 243)
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  text-shadow: -1px 1px 0 rgb(206, 142, 104);
 }
 
-.resultsTitle {
-  color: rgb(132, 200, 223);
+
+.about-title {
+  color: white;
   text-align: center;
-  font-size: 36px;
+  margin-top: 40px;
+  text-shadow: 1px 1px 0 #000, 1px -1px 0 #000;
+}
+
+.about-title.two {
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.gratitude-title {
+  font-size: 4em;
+  text-align: center;
+  margin-top: 40px;
+  color: white;;
+  text-shadow: -1px 1px 0 rgb(206, 142, 104);
+}
+
+.instructions {
+  color: white;
+  text-shadow: -1px 1px 0 black;
+
+}
+
+.resultsTitle h1 {
+  color: white;
+  text-shadow: -1px 1px 0 rgb(206, 142, 104);
+  text-align: center;
+  font-size: 30px;
   margin-top: 15px;
-  text-shadow: -1px 1px 0 rgb(113, 93, 243), 1px 1px 0 rgb(113, 93, 243), 1px -1px 0 rgb(113, 93, 243), -1px -1px 0 rgb(113, 93, 243);
 }
 
 .question {
@@ -28,41 +53,44 @@ body {
   font-size: 22px;
   color: rgb(227, 227, 238);
   margin: 8px;
-  font-family: cursive;
   margin-top: 10px;
 }
 
 .prompt {
-  color: rgb(227, 227, 238);
   font-size: 20px;
   margin: 3px;
-  text-align: center;
-  font-family: cursive;
+  text-align: left;
   margin-top: 15px;
-  color: rgb(49, 41, 105);
+  color: lavender;
   padding: 20px;
   border-radius: 10px;
 }
 
 .prompt.prompt1 {
-  background-color: rgb(132, 200, 223);
+  background-color: rgb(87, 73, 184);
+  text-align: left;
+
 }
 
 .prompt.prompt2 {
-  background-color: rgb(99, 192, 223);
+  background-color: rgb(97, 86, 170);
+  text-align: left;
+
 }
 
 .prompt.prompt3 {
-  background-color: rgb(48, 176, 219)
+  background-color: rgb(126, 117, 185);
+  text-align: left;
+
 }
 .gratefulnessForm {
   background-color: rgb(87, 73, 184);
   /* background-image: linear-gradient(to right, rgb(133, 212, 238),rgb(115, 102, 196)); */
-
   text-align: center;
   border-radius: 10px;
-  width: 50%;
-  margin-left: 25%;
+  width: 650px;
+  justify-content: center;
+  height: 500px;
 }
 
 .promptsGratefulnessForm {
@@ -77,7 +105,7 @@ body {
 .gratefulnessPost {
   background-color: rgb(87, 73, 184);
   border-style: solid;
-  border-color: rgb(132, 200, 223);
+  border-color: rgb(132, 223, 219);
   color: lavender;
   text-align: left;
   border-radius: 10px;
@@ -135,19 +163,19 @@ form[id="locationFilter"] {
   background-color: rgb(87, 73, 184);
   border-style: solid;
   border-radius: 10px;
-  border-color: rgb(132, 200, 223);
+  border-color: rgb(132, 223, 219);
   height: 320px;
 }
 
 .readAllButton button {
   color: rgb(87, 73, 184);
-  background-color:  rgb(132, 200, 223);
+  background-color:  rgb(132, 223, 219);
   width: 200px;
   margin-top: 30px;
 }
 
 .navbar-dark.bg-custom {
-  background-color: rgb(132, 200, 223);
+  background-color: rgb(132, 223, 219);
 }
 .nav-link:hover {
   /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
@@ -164,10 +192,10 @@ form[id="locationFilter"] {
 }
 
 .button {
-  background-color: rgb(132, 200, 223); /* Green */
+  background-color: rgb(132, 223, 219); /* Green */
   border: none;
   border-radius: 5px;
-  color: lavender;
+  color: rgb(87, 73, 184);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -182,13 +210,26 @@ label {
 }
 
 .question p {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .btn.btn-primary.btn-lg {
-  background-color: rgb(132, 200, 223);
+  background-color: rgb(132, 223, 219);
   border: none;
+  color: rgb(87, 73, 184);
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 17px;
+}
 
+.btn.btn-primary.btn-lg:active:focus {
+  background-color: rgb(132, 223, 219);
+  color: rgb(87, 73, 184);
+}
+
+.btn.btn-primary.btn-lg.stuck {
+  background-color: rgb(128, 110, 161);
+  margin-top: 25px !important;
+  color: white;
 }
 
 ::placeholder {
@@ -201,9 +242,8 @@ label {
 }
 
 input {
-  background-color: lavender;
+  background-color: white;
   color: rgb(99, 96, 96);
-  font-family: cursive;
   margin: 1px;
   padding-left: 3px;
 }
@@ -257,7 +297,7 @@ div {
 
 .steps{
   color: lavender;
-  text-align: center;
+  text-align: left;
   border-radius: 10px;
   font-size: 20px;
   padding-top: 1px;
@@ -280,10 +320,6 @@ html {
   list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 h1 {
   font-size: 3rem;
   margin: 0 0 1.25rem 0;
@@ -292,10 +328,8 @@ h1 {
 h2 {
   font-size: 2rem;
   margin: 0 0 1.25rem 0;
-  font-family: Helvetica;
 }
 
 p {
-  font-family: "Times New Roman";
   margin: 0 0 1.5rem 0;
 }

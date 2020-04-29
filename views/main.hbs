@@ -1,12 +1,16 @@
-<h1 class='title'>Gratitude</h1>
+<h1 class='gratitude-title'>Give Gratitude</h1>
 
-<form action='/formSubmission' method='POST'>
-  <div class='gratefulnessForm'>
+<div class="instructions text-center">
+  <p>What are you grateful for? Reflect on this question below. Your submission will be visible to all visitors of this site.</p>
+</div>
+
+<form action='/formSubmission' method='POST' class="d-flex justify-content-center">
+  <div class='gratefulnessForm shadow-lg p-3 mb-5'>
 
     <div class="form-group">
       <div class='question'>
-          <label for="answer"> <strong>What are you grateful for?</strong></label>
-          <textarea class="input" type="text" placeholder="I am grateful for ... " name="body" id='answer'>I am grateful for</textarea>
+          <label for="answer"> What are you grateful for?</label>
+          <textarea class="input" type="text" placeholder="I am grateful for ... " name="body" id='answer'></textarea>
       </div>
     <div>
 
@@ -20,18 +24,17 @@
     <div class="form-group">
       <div class='question'>
         <label for="answer"> Where are you writing from?</label>
-        <input class="input" type="text" placeholder="Davidson, North Carolina" name="location" id='answer'>
+        <input class="input" type="text" placeholder="Davidson, NC" name="location" id='answer'>
       </div>
     </div>
 
     <div class='question'>
-      <button type='submit' id='submitButton' class='button'>Submit</button>
+      <button type='submit' id='submitButton' class='btn btn-primary btn-lg'>Submit</button>
     </div>
   </div>
 </form>
 <div class="question">
-  <p><strong>OR</strong></p>
-  <a style="width: fit-content; margin: 2% auto;" href="/prompts" class="btn btn-primary btn-lg">Give me some prompts</a>
+  <a style="width: fit-content; margin: 2% auto;" href="/prompts" class="btn btn-primary btn-lg stuck">Stuck? Click here for some gratitude prompts!</a>
 </div>
 
 <script>
