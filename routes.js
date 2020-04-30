@@ -36,10 +36,11 @@ router.get('/filter', async(request, response) => {
   console.log('Searching gratitude messages with location: ', locationFilter);
 
   // make query for similar results from SQL database
-  let gratitudeMessages = await GratitudeMessage.query().where('location', 'ilike', `%${locationFilter}%`);
+  let gratitudeMessages = await knex('gratitude_messages').where('location', 'ilike', `%${locationFilter}%`);
 
   // Render the page with the results
   response.render('submit', { gratitudeMessages, locationFilter });
+
 });
 
 router.get('/keyword', async(request, response) => {
@@ -48,7 +49,7 @@ router.get('/keyword', async(request, response) => {
   console.log('Searching gratitude messages with keyword: ', keywordFilter);
 
   // make query for similar results from SQL database
-  let gratitudeMessages = await GratitudeMessage.query().where('body', 'ilike', `%${keywordFilter}%`);
+  let gratitudeMessages = await knex('gratitude_messages').where('body', 'ilike', `%${keywordFilter}%`);
 
   // Render the page with the results
   response.render('submit', { gratitudeMessages, keywordFilter });

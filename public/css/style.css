@@ -36,7 +36,7 @@ body {
 }
 
 .gratitude-title {
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
   margin-top: 40px;
   color: white;
@@ -98,7 +98,7 @@ body {
   border-radius: 10px;
   width: 600px;
   justify-content: center;
-  height: 570px;
+  height: 530px;
   padding: 10px;
 }
 
