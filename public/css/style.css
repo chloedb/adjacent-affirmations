@@ -14,6 +14,11 @@ body {
   width: 100%;
   height: 330px
 }
+
+.instructions.part2 {
+  font-size: 25px;
+}
+
 .panic-title {
   color:  white;
   text-align: center;
