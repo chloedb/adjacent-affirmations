@@ -41,7 +41,16 @@
       <div class="col">
         <div id="messages">
           {{#unless gratitudeMessages}}
-            <p>Sorry, no messages. :(</p>
+              {{#if keywordFilter}}
+                <div class="no-message">
+                  <p>No messages match "{{keywordFilter}}" yet!</p>
+                </div>
+              {{/if}}
+              {{#if locationFilter}}
+                <div class="no-message">
+                  <p>No messages from "{{locationFilter}}" yet!</p>
+                </div>
+              {{/if}}
           {{else}}
             {{#each gratitudeMessages}}
               <div class='gratefulnessPost'>

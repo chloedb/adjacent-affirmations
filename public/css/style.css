@@ -2,7 +2,7 @@ body {
   background-image: url('/images/sunset.jpg');
   /* background-repeat: repeat; */
   background-size: 1536px 1025px;
-  font-family: Georgia, 'Times New Roman', Times, serif
+  font-family: 'Merriweather', serif;
 }
 .header {
   /* background-image: url('/images/sunset.jpg'); */
@@ -16,7 +16,12 @@ body {
 }
 
 .instructions.part2 {
-  font-size: 25px;
+  font-size: 23px;
+}
+
+.no-message {
+  color: white;
+  margin-top: 60px;
 }
 
 .panic-title {
@@ -41,7 +46,7 @@ body {
 }
 
 .gratitude-title {
-  font-size: 3em;
+  font-size: 2.75em;
   text-align: center;
   margin-top: 40px;
   color: white;
