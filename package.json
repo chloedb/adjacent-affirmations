@@ -28,7 +28,7 @@
     "handlebars": "^4.7.6",
     "hbs": "^4.1.1",
     "http-errors": "^1.7.3",
-    "knex": "^0.21.0",
+    "knex": "^2.4.0",
     "moment": "^2.24.0",
     "morgan": "^1.10.0",
     "objection": "^2.1.3",
